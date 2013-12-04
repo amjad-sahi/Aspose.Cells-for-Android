@@ -17,7 +17,7 @@ Using Aspose.Cells for Android in your project gives you the following benefits:
 These example projects provide helpful demonstrations and code when using Aspose.Cells for Android. You will need to [download Aspose.Cells for Android](http://www.aspose.com/community/files/74/android-components/aspose.cells-for-android/default.aspx) separately and it will work in evaluation mode.
 
 ## Aspose.Cells for Android at a Glance
-![Aspose.Cells Overview](http://www.aspose.com/Images/asposeCellsforAndroid-At-A-Glance-diagram.png "The Main Features of Aspose.Cells for Android")
+![Aspose.Cells Overview](http://www.aspose.com/Aspose.Cells/Images/Diagrams/Android/asposeCellsforAndroid-At-A-Glance-diagram.png "The Main Features of Aspose.Cells for Android")
 
 ## Open Source Feel of Aspose.Cells
 
