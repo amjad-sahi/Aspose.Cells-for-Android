@@ -17,7 +17,7 @@ public class MainActivity extends Activity {
 		//Get the SD card path
 		String sdPath = Environment.getExternalStorageDirectory().getPath() + File.separator;
 
-		String filePath = sdPath + "AreaTemplate.xls";
+		String filePath = sdPath + "AreaTemplate.xlsx";
 				
 		Workbook workbook = new Workbook(filePath);
 
@@ -66,7 +66,7 @@ public class MainActivity extends Activity {
 		font2.setSize(10);
 		categoryAxis.setAxisBetweenCategories(false);
 
-		workbook.save(filePath + ".out.xls", SaveFormat.EXCEL_97_TO_2003);
+		workbook.save(filePath + ".out.xlsx", SaveFormat.XLSX);
 	}
 
 	@Override
