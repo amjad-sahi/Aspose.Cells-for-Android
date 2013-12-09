@@ -43,6 +43,9 @@ All examples are provided as separate projects in Java. Each example contains a 
   <tr><th>Example<th>Description</th></tr>
   <tr><td>HelloWorld</td><td>Demonstrates how to create a simple document and save it to the external storage device in a variety of different formats.</td></tr>
   <tr><td>Chart</td><td>Demonstrates how to create a chart and save it to the external storage device. You will need to push AreaTemplate.xls file in external storage device which you can get from the Input directory to run this demo.</td></tr>
+  <tr><td>Hyperlink</td><td>Demonstrates how to add a hyperlink in a cell and save the output xlsx to the external storage device.</td></tr>
+  <tr><td>Data Filter</td><td>Demonstrates how to add a data filter and save the output xlsx to the external storage device.</td></tr>
+  <tr><td>Data Validation</td><td>Demonstrates how to add data validation and save the output xlsx to the external storage device.</td></tr>
 </table>
 
 ###Data
