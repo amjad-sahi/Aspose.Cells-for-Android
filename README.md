@@ -52,6 +52,8 @@ All examples are provided as separate projects in Java. Each example contains a 
   <tr><td>Grouping Rows and Columns</td><td>Demonstrates how to group rows and columns and save the output xls to the external storage device. You will need to push UnGroupingRowsAndColumns.xls file in external storage device which you can get from the Input directory to run this demo.</td></tr>
   <tr><td>Ungrouping Rows and Columns</td><td>Demonstrates how to ungroup rows and columns and save the output xls to the external storage device. You will need to push GroupingRowsAndColumns.xls file in external storage device which you can get from the Input directory to run this demo.</td></tr>
   <tr><td>Insert Rows and Columns</td><td>Demonstrates how to insert rows and columns and save the output xls to the external storage device.</td></tr>
+  <tr><td>Delete Rows and Columns</td><td>Demonstrates how to delete rows and columns and save the output xls to the external storage device.</td></tr>
+  <tr><td>Calculate Formula</td><td>Demonstrates how to use Workbook.calculateFormula() method. You will need to push CalculateFormula.xls file in external storage device which you can get from the Input directory to run this demo.</td></tr>
 </table>
 
 ###Data
