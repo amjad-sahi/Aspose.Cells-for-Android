@@ -46,7 +46,7 @@ All examples are provided as separate projects in Java. Each example contains a 
   <tr><td>Hyperlink</td><td>Demonstrates how to add a hyperlink in a cell and save the output xlsx to the external storage device.</td></tr>
   <tr><td>Data Filter</td><td>Demonstrates how to add a data filter and save the output xlsx to the external storage device.</td></tr>
   <tr><td>Data Validation</td><td>Demonstrates how to add data validation and save the output xlsx to the external storage device.</td></tr>
-  <tr><td>Adjusting Rows and Columns</td><td>Demonstrates how to ajust rows heights and columns widths and save the output xls to the external storage device.</td></tr>
+  <tr><td>Adjusting Rows and Columns</td><td>Demonstrates how to adjust rows heights and columns widths and save the output xls to the external storage device.</td></tr>
   <tr><td>Hiding Rows and Columns</td><td>Demonstrates how to hide rows and columns and save the output xls to the external storage device.</td></tr>
   <tr><td>Displaying Rows and Columns</td><td>Demonstrates how to display rows and columns and save the output xls to the external storage device.</td></tr>
   <tr><td>Grouping Rows and Columns</td><td>Demonstrates how to group rows and columns and save the output xls to the external storage device. You will need to push UnGroupingRowsAndColumns.xls file in external storage device which you can get from the Input directory to run this demo.</td></tr>
