@@ -78,6 +78,26 @@ import com.aspose.cells.examples.asposecellsexamples.RowsAndColumns.ManagingRows
 import com.aspose.cells.examples.asposecellsexamples.Table.ConvertTableToRangeOfData;
 import com.aspose.cells.examples.asposecellsexamples.Table.CreateAListObject;
 import com.aspose.cells.examples.asposecellsexamples.Table.FormatAListObject;
+import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.HTMLFormat.ExportExcelToHTMLWithGridLines;
+import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.HTMLFormat.SupportForLayoutOfDIVTags;
+import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ManageChartsShapesAndObjects.AddActiveX;
+import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ManageChartsShapesAndObjects.AutomaticallyRefreshOLEObject;
+import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ManageChartsShapesAndObjects.ChangeCharacterSpacingOfExcelTextBoxOrShape;
+import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ManageChartsShapesAndObjects.CreateTextBoxHavingEachLineWithDifferentHorizontalAlignment;
+import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ManageChartsShapesAndObjects.SetCommentForTableOrListObject;
+import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ManageChartsShapesAndObjects.SetLineSpacingOfTheParagraphInAShapeOrTextBox;
+import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ManageChartsShapesAndObjects.SetTextOfChartLegendEntryFillToNone;
+import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ManagePivotTableAndPivotChart.RefreshAndCalculatePivotTableHavingCalculatedItems;
+import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ManagePivotTableAndPivotChart.RestrictionsOfExcel2003WhileRefreshingPivotTable;
+import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ManageWorkbookAndWorksheet.LoadSourceExcelFileWithoutCharts;
+import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ManageWorkbookAndWorksheet.LoadWorkbookWithSpecifiedPrinterPaperSize;
+import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.RenderAndPrint.SetDefaultFontWhileRenderingSpreadsheetToImage;
+import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.SmartMarkers.DirectCalculationOfCustomFunction;
+import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.SmartMarkers.ExportDataBarColorScaleAndIconSetConditionalFormatting;
+import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.SmartMarkers.FilterDataWhileLoadingWorkbookFromTemplateFile;
+import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.SmartMarkers.RenderUnicodeSupplementaryCharacters;
+import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.SmartMarkers.SetShadowOfTextEffectsOfShapeOrTextBox;
+import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.SmartMarkers.UpdateReferencesInOtherWorksheets;
 import com.aspose.cells.examples.asposecellsexamples.UtilityFeatures.ConvertChartToImage;
 import com.aspose.cells.examples.asposecellsexamples.UtilityFeatures.ConvertChartToPDF;
 import com.aspose.cells.examples.asposecellsexamples.UtilityFeatures.ConvertExcelFilesToHTML;
@@ -169,6 +189,9 @@ public class MainActivity extends AppCompatActivity {
                     // Working with CellsHelper Methods
                     runWorkingWithCellsHelperMethodsExamples();
                     break;
+                case 11:
+                    // Technical Articles
+                    runTechnicalArticlesExamples();
                 default:
                     break;
             }
@@ -193,6 +216,7 @@ public class MainActivity extends AppCompatActivity {
         sectionsNames.add("Working with Tables");
         sectionsNames.add("Working with Formulas");
         sectionsNames.add("Working with CellsHelper Methods");
+        sectionsNames.add("Technical Articles");
 
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, sectionsNames);
         listView.setAdapter(arrayAdapter);
@@ -855,6 +879,88 @@ public class MainActivity extends AppCompatActivity {
         rowAndColumnIndicesFromCellName.getRowAndColumnIndicesFromCellName();
     }
 
+    public void runTechnicalArticlesExamples() {
+        // Add Toggle Button ActiveX Control
+        AddActiveX addActiveX = new AddActiveX();
+        addActiveX.addToggleButtonActiveXControl();
+
+        // Filtering the kind of data while loading the workbook from template file
+        FilterDataWhileLoadingWorkbookFromTemplateFile filterData = new FilterDataWhileLoadingWorkbookFromTemplateFile();
+        filterData.filterDataWhileLoadingWorkbookFromTemplateFile();
+
+        // Update references in other worksheets while deleting blank columns and rows in a worksheet
+        UpdateReferencesInOtherWorksheets updateReferencesInOtherWorksheets = new UpdateReferencesInOtherWorksheets();
+        updateReferencesInOtherWorksheets.updateReferencesInOtherWorksheetsWhileDeletingBlankColumnsAndRowsInAWorksheet();
+
+        // Export Excel to HTML with GridLines
+        ExportExcelToHTMLWithGridLines exportExcel = new ExportExcelToHTMLWithGridLines();
+        exportExcel.exportExcelToHTMLWithGridLines();
+
+        // Automatically Refresh OLE Object via Microsoft Excel using Aspose.Cells
+        AutomaticallyRefreshOLEObject automaticallyRefreshOLEObject = new AutomaticallyRefreshOLEObject();
+        automaticallyRefreshOLEObject.automaticallyRefreshOLEObject();
+
+        // Set the Comment for Table or List Object inside the Worksheet
+        SetCommentForTableOrListObject setComment = new SetCommentForTableOrListObject();
+        setComment.setCommentForTableOrListObject();
+
+        // Set Default Font while Rendering Spreadsheet to Images
+        SetDefaultFontWhileRenderingSpreadsheetToImage setDefaultFont = new SetDefaultFontWhileRenderingSpreadsheetToImage();
+        setDefaultFont.setDefaultFontWhileRenderingSpreadsheetToImages();
+
+        // Restrictions of Excel 2003 while Refreshing Pivot Table
+        RestrictionsOfExcel2003WhileRefreshingPivotTable restrictionsOfExcel = new RestrictionsOfExcel2003WhileRefreshingPivotTable();
+        restrictionsOfExcel.restrictionsOfExcel2003WhileRefreshingPivotTable();
+
+        // Setting Shadow of Text Effects of Shape or TextBox
+        SetShadowOfTextEffectsOfShapeOrTextBox shadowOfTextEffects = new SetShadowOfTextEffectsOfShapeOrTextBox();
+        shadowOfTextEffects.setShadowOfTextEffectsOfShapeOrTextBox();
+
+        // Direct calculation of custom function without writing it in a worksheet
+        DirectCalculationOfCustomFunction directCalculation = new DirectCalculationOfCustomFunction();
+        directCalculation.directCalculationOfCustomFunction();
+
+        // Export DataBar, ColorScale and IconSet Conditional Formatting while Excel to HTML Conversion
+        ExportDataBarColorScaleAndIconSetConditionalFormatting exportData = new ExportDataBarColorScaleAndIconSetConditionalFormatting();
+        exportData.exportDataBarColorScaleAndIconSetConditionalFormatting();
+
+        // Render Unicode Supplementary characters in output Pdf by Aspose.Cells
+        RenderUnicodeSupplementaryCharacters renderUnicode = new RenderUnicodeSupplementaryCharacters();
+        renderUnicode.renderUnicodeSupplementaryCharactersInOutputPdf();
+
+        // Refresh and Calculate Pivot Table having Calculated Items
+        RefreshAndCalculatePivotTableHavingCalculatedItems refreshAndCalculate = new RefreshAndCalculatePivotTableHavingCalculatedItems();
+        refreshAndCalculate.refreshAndCalculatePivotTableHavingCalculatedItems();
+
+        // Change Character Spacing of Excel TextBox or Shape
+        ChangeCharacterSpacingOfExcelTextBoxOrShape changeCharacterSpacing = new ChangeCharacterSpacingOfExcelTextBoxOrShape();
+        changeCharacterSpacing.changeCharacterSpacingOfExcelTextBoxOrShape();
+
+        // Load Source Excel File Without Charts
+        LoadSourceExcelFileWithoutCharts loadSourceExcelFile = new LoadSourceExcelFileWithoutCharts();
+        loadSourceExcelFile.loadSourceExcelFileWithoutCharts();
+
+        // Support for Layout of DIV Tags while Loading HTML
+        SupportForLayoutOfDIVTags supportForLayout = new SupportForLayoutOfDIVTags();
+        supportForLayout.supportForLayoutOfDIVTagsWhileLoadingHTML();
+
+        // Set Text of Chart Legend Entry Fill to None
+        SetTextOfChartLegendEntryFillToNone setText = new SetTextOfChartLegendEntryFillToNone();
+        setText.setTextOfChartLegendEntryFillToNone();
+
+        // Load Workbook with Specified Printer Paper Size
+        LoadWorkbookWithSpecifiedPrinterPaperSize loadWorkbook = new LoadWorkbookWithSpecifiedPrinterPaperSize();
+        loadWorkbook.loadWorkbookWithSpecifiedPrinterPaperSize();
+
+        // Set Line Spacing of the Paragraph in a Shape or TextBox
+        SetLineSpacingOfTheParagraphInAShapeOrTextBox lineSpacingOfTheParagraph = new SetLineSpacingOfTheParagraphInAShapeOrTextBox();
+        lineSpacingOfTheParagraph.setLineSpacingOfTheParagraphInAShapeOrTextBox();
+
+        // Create TextBox Having Each Line with Different Horizontal Alignment
+        CreateTextBoxHavingEachLineWithDifferentHorizontalAlignment createTextBox = new CreateTextBoxHavingEachLineWithDifferentHorizontalAlignment();
+        createTextBox.createTextBoxHavingEachLineWithDifferentHorizontalAlignment();
+    }
+
     public void saveAssetsFilesToExternalStorage() {
         new SaveFilesToExternalStorageTask().execute();
     }
@@ -868,7 +974,7 @@ public class MainActivity extends AppCompatActivity {
             progressDialog.setMessage(getString(R.string.saving_resource_files_external_storage));
             progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
             progressDialog.setIndeterminate(false);
-            progressDialog.setMax(13);
+            progressDialog.setMax(21);
             progressDialog.setCancelable(false);
             progressDialog.show();
         }
@@ -902,6 +1008,22 @@ public class MainActivity extends AppCompatActivity {
             publishProgress(Integer.valueOf(12));
             Utils.saveFileToExternalStorage(MainActivity.this, "PageBreaks.xls");
             publishProgress(Integer.valueOf(13));
+            Utils.saveFileToExternalStorage(MainActivity.this, "templateFile.xlsx");
+            publishProgress(Integer.valueOf(14));
+            Utils.saveFileToExternalStorage(MainActivity.this, "sample-oleobject.xlsx");
+            publishProgress(Integer.valueOf(15));
+            Utils.saveFileToExternalStorage(MainActivity.this, "sample-pivot-table.xlsx");
+            publishProgress(Integer.valueOf(16));
+            Utils.saveFileToExternalStorage(MainActivity.this, "ExportDataBar.xlsx");
+            publishProgress(Integer.valueOf(17));
+            Utils.saveFileToExternalStorage(MainActivity.this, "unicode-supplementary-characters.xlsx");
+            publishProgress(Integer.valueOf(18));
+            Utils.saveFileToExternalStorage(MainActivity.this, "sample-pivottable.xlsx");
+            publishProgress(Integer.valueOf(19));
+            Utils.saveFileToExternalStorage(MainActivity.this, "sample-character-spacing.xlsx");
+            publishProgress(Integer.valueOf(20));
+            Utils.saveFileToExternalStorage(MainActivity.this, "sample-chart-legend.xlsx");
+            publishProgress(Integer.valueOf(21));
 
             return null;
         }
