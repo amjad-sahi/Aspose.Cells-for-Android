@@ -78,6 +78,7 @@ import com.aspose.cells.examples.asposecellsexamples.RowsAndColumns.ManagingRows
 import com.aspose.cells.examples.asposecellsexamples.Table.ConvertTableToRangeOfData;
 import com.aspose.cells.examples.asposecellsexamples.Table.CreateAListObject;
 import com.aspose.cells.examples.asposecellsexamples.Table.FormatAListObject;
+import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ChangeDataSourceOfTheChartToDestinationWorksheet;
 import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.HTMLFormat.ExportExcelToHTMLWithGridLines;
 import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.HTMLFormat.SupportForLayoutOfDIVTags;
 import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ManageChartsShapesAndObjects.AddActiveX;
@@ -91,13 +92,20 @@ import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ManagePiv
 import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ManagePivotTableAndPivotChart.RestrictionsOfExcel2003WhileRefreshingPivotTable;
 import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ManageWorkbookAndWorksheet.LoadSourceExcelFileWithoutCharts;
 import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ManageWorkbookAndWorksheet.LoadWorkbookWithSpecifiedPrinterPaperSize;
+import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ProvideExportedWorksheetHtmlFilePath;
+import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.RenderAndPrint.ConfigureFontsForRenderingSpreadsheets;
 import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.RenderAndPrint.SetDefaultFontWhileRenderingSpreadsheetToImage;
+import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.SmartMarkers.DecreaseTheCalculationTimeOfCellCalculateMethod;
 import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.SmartMarkers.DirectCalculationOfCustomFunction;
+import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.SmartMarkers.ExpandTextFromRightToLeftWhileExportingExcelFileToHTML;
 import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.SmartMarkers.ExportDataBarColorScaleAndIconSetConditionalFormatting;
 import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.SmartMarkers.FilterDataWhileLoadingWorkbookFromTemplateFile;
+import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.SmartMarkers.FindIfDataPointsAreInTheSecondPieOrBarOnAPieOfPieOrBarOfPieChart;
+import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.SmartMarkers.GetOrSetTheClassIdentifierOfTheEmbeddedOLEObject;
 import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.SmartMarkers.RenderUnicodeSupplementaryCharacters;
 import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.SmartMarkers.SetShadowOfTextEffectsOfShapeOrTextBox;
 import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.SmartMarkers.UpdateReferencesInOtherWorksheets;
+import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.UpdateActiveXComboBoxControl;
 import com.aspose.cells.examples.asposecellsexamples.UtilityFeatures.ConvertChartToImage;
 import com.aspose.cells.examples.asposecellsexamples.UtilityFeatures.ConvertChartToPDF;
 import com.aspose.cells.examples.asposecellsexamples.UtilityFeatures.ConvertExcelFilesToHTML;
@@ -959,6 +967,38 @@ public class MainActivity extends AppCompatActivity {
         // Create TextBox Having Each Line with Different Horizontal Alignment
         CreateTextBoxHavingEachLineWithDifferentHorizontalAlignment createTextBox = new CreateTextBoxHavingEachLineWithDifferentHorizontalAlignment();
         createTextBox.createTextBoxHavingEachLineWithDifferentHorizontalAlignment();
+
+        // Change Data Source of the Chart to Destination Worksheet while Copying Rows or Range
+        ChangeDataSourceOfTheChartToDestinationWorksheet changeDataSource = new ChangeDataSourceOfTheChartToDestinationWorksheet();
+        changeDataSource.changeDataSourceOfTheChartToDestinationWorksheetWhileCopyingRowsOrRange();
+
+        // Configuring Fonts for Rendering Spreadsheets
+        ConfigureFontsForRenderingSpreadsheets fontsForRenderingSpreadsheets = new ConfigureFontsForRenderingSpreadsheets();
+        fontsForRenderingSpreadsheets.selectionOfFonts();
+
+        // Decrease the Calculation Time of Cell.Calculate() method
+        DecreaseTheCalculationTimeOfCellCalculateMethod decreaseTheCalculationTime = new DecreaseTheCalculationTimeOfCellCalculateMethod();
+        decreaseTheCalculationTime.decreaseTheCalculationTimeOfCellCalculateMethod();
+
+        // Expanding text from right to left while exporting Excel file to HTML
+        ExpandTextFromRightToLeftWhileExportingExcelFileToHTML expandText = new ExpandTextFromRightToLeftWhileExportingExcelFileToHTML();
+        expandText.expandTextFromRightToLeftWhileExportingExcelFileToHTML();
+
+        // Find if Data Points are in the Second Pie or Bar on a Pie of Pie or Bar of Pie Chart
+        FindIfDataPointsAreInTheSecondPieOrBarOnAPieOfPieOrBarOfPieChart findIfDataPoints = new FindIfDataPointsAreInTheSecondPieOrBarOnAPieOfPieOrBarOfPieChart();
+        findIfDataPoints.findIfDataPointsAreInTheSecondPieOrBarOnAPieOfPieOrBarOfPieChart();
+
+        // Get or Set the Class Identifier of the Embedded OLE Object
+        GetOrSetTheClassIdentifierOfTheEmbeddedOLEObject embeddedOLEObject = new GetOrSetTheClassIdentifierOfTheEmbeddedOLEObject();
+        embeddedOLEObject.getOrSetTheClassIdentifierOfTheEmbeddedOLEObject();
+
+        // Provide exported worksheet html file path via IFilePathProvider interface
+        ProvideExportedWorksheetHtmlFilePath exportedWorksheetHtmlFilePath = new ProvideExportedWorksheetHtmlFilePath();
+        exportedWorksheetHtmlFilePath.provideExportedWorksheetHtmlFilePath();
+
+        // Update ActiveX ComboBox Control
+        UpdateActiveXComboBoxControl comboBoxControl = new UpdateActiveXComboBoxControl();
+        comboBoxControl.updateActiveXComboBoxControl();
     }
 
     public void saveAssetsFilesToExternalStorage() {
@@ -974,7 +1014,7 @@ public class MainActivity extends AppCompatActivity {
             progressDialog.setMessage(getString(R.string.saving_resource_files_external_storage));
             progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
             progressDialog.setIndeterminate(false);
-            progressDialog.setMax(21);
+            progressDialog.setMax(30);
             progressDialog.setCancelable(false);
             progressDialog.show();
         }
@@ -982,7 +1022,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... voids) {
             // Save Resource Files To External Storage
-            Utils.saveFileToExternalStorage(MainActivity.this, "Book1.xlsx");
+            Utils.saveFileToExternalStorage(MainActivity.this, "Aspose.Total.Java.lic");
             publishProgress(Integer.valueOf(1));
             Utils.saveFileToExternalStorage(MainActivity.this, "Book1.xls");
             publishProgress(Integer.valueOf(2));
@@ -1024,7 +1064,24 @@ public class MainActivity extends AppCompatActivity {
             publishProgress(Integer.valueOf(20));
             Utils.saveFileToExternalStorage(MainActivity.this, "sample-chart-legend.xlsx");
             publishProgress(Integer.valueOf(21));
-
+            Utils.saveFileToExternalStorage(MainActivity.this, "ChangeDataSource.xlsx");
+            publishProgress(Integer.valueOf(22));
+            Utils.setupFontsFolderAndSaveFileToExternalStorage(MainActivity.this, "Calibri", "Arial", "arial.ttf");
+            publishProgress(Integer.valueOf(23));
+            Utils.saveFileToExternalStorage(MainActivity.this, "CalculationTime.xlsx");
+            publishProgress(Integer.valueOf(24));
+            Utils.saveFileToExternalStorage(MainActivity.this, "ExpandText.xlsx");
+            publishProgress(Integer.valueOf(25));
+            Utils.saveFileToExternalStorage(MainActivity.this, "PieBars.xlsx");
+            publishProgress(Integer.valueOf(26));
+            Utils.saveFileToExternalStorage(MainActivity.this, "EmbeddedOLEObject.xls");
+            publishProgress(Integer.valueOf(27));
+            Utils.saveFileToExternalStorage(MainActivity.this, "Book1.xlsx");
+            publishProgress(Integer.valueOf(28));
+            Utils.saveFileToExternalStorage(MainActivity.this, "IFilePathProvider_Sample.xlsx");
+            publishProgress(Integer.valueOf(29));
+            Utils.saveFileToExternalStorage(MainActivity.this, "ComboBox_Sample.xlsx");
+            publishProgress(Integer.valueOf(30));
             return null;
         }
 
