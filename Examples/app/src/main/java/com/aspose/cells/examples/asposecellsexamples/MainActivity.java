@@ -2,6 +2,7 @@ package com.aspose.cells.examples.asposecellsexamples;
 
 import android.Manifest;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -78,34 +79,6 @@ import com.aspose.cells.examples.asposecellsexamples.RowsAndColumns.ManagingRows
 import com.aspose.cells.examples.asposecellsexamples.Table.ConvertTableToRangeOfData;
 import com.aspose.cells.examples.asposecellsexamples.Table.CreateAListObject;
 import com.aspose.cells.examples.asposecellsexamples.Table.FormatAListObject;
-import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ChangeDataSourceOfTheChartToDestinationWorksheet;
-import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.HTMLFormat.ExportExcelToHTMLWithGridLines;
-import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.HTMLFormat.SupportForLayoutOfDIVTags;
-import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ManageChartsShapesAndObjects.AddActiveX;
-import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ManageChartsShapesAndObjects.AutomaticallyRefreshOLEObject;
-import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ManageChartsShapesAndObjects.ChangeCharacterSpacingOfExcelTextBoxOrShape;
-import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ManageChartsShapesAndObjects.CreateTextBoxHavingEachLineWithDifferentHorizontalAlignment;
-import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ManageChartsShapesAndObjects.SetCommentForTableOrListObject;
-import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ManageChartsShapesAndObjects.SetLineSpacingOfTheParagraphInAShapeOrTextBox;
-import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ManageChartsShapesAndObjects.SetTextOfChartLegendEntryFillToNone;
-import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ManagePivotTableAndPivotChart.RefreshAndCalculatePivotTableHavingCalculatedItems;
-import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ManagePivotTableAndPivotChart.RestrictionsOfExcel2003WhileRefreshingPivotTable;
-import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ManageWorkbookAndWorksheet.LoadSourceExcelFileWithoutCharts;
-import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ManageWorkbookAndWorksheet.LoadWorkbookWithSpecifiedPrinterPaperSize;
-import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.ProvideExportedWorksheetHtmlFilePath;
-import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.RenderAndPrint.ConfigureFontsForRenderingSpreadsheets;
-import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.RenderAndPrint.SetDefaultFontWhileRenderingSpreadsheetToImage;
-import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.SmartMarkers.DecreaseTheCalculationTimeOfCellCalculateMethod;
-import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.SmartMarkers.DirectCalculationOfCustomFunction;
-import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.SmartMarkers.ExpandTextFromRightToLeftWhileExportingExcelFileToHTML;
-import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.SmartMarkers.ExportDataBarColorScaleAndIconSetConditionalFormatting;
-import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.SmartMarkers.FilterDataWhileLoadingWorkbookFromTemplateFile;
-import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.SmartMarkers.FindIfDataPointsAreInTheSecondPieOrBarOnAPieOfPieOrBarOfPieChart;
-import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.SmartMarkers.GetOrSetTheClassIdentifierOfTheEmbeddedOLEObject;
-import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.SmartMarkers.RenderUnicodeSupplementaryCharacters;
-import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.SmartMarkers.SetShadowOfTextEffectsOfShapeOrTextBox;
-import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.SmartMarkers.UpdateReferencesInOtherWorksheets;
-import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.UpdateActiveXComboBoxControl;
 import com.aspose.cells.examples.asposecellsexamples.UtilityFeatures.ConvertChartToImage;
 import com.aspose.cells.examples.asposecellsexamples.UtilityFeatures.ConvertChartToPDF;
 import com.aspose.cells.examples.asposecellsexamples.UtilityFeatures.ConvertExcelFilesToHTML;
@@ -199,7 +172,8 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case 11:
                     // Technical Articles
-                    runTechnicalArticlesExamples();
+                    startTechnicalArticlesActivity();
+                    break;
                 default:
                     break;
             }
@@ -887,118 +861,9 @@ public class MainActivity extends AppCompatActivity {
         rowAndColumnIndicesFromCellName.getRowAndColumnIndicesFromCellName();
     }
 
-    public void runTechnicalArticlesExamples() {
-        // Add Toggle Button ActiveX Control
-        AddActiveX addActiveX = new AddActiveX();
-        addActiveX.addToggleButtonActiveXControl();
-
-        // Filtering the kind of data while loading the workbook from template file
-        FilterDataWhileLoadingWorkbookFromTemplateFile filterData = new FilterDataWhileLoadingWorkbookFromTemplateFile();
-        filterData.filterDataWhileLoadingWorkbookFromTemplateFile();
-
-        // Update references in other worksheets while deleting blank columns and rows in a worksheet
-        UpdateReferencesInOtherWorksheets updateReferencesInOtherWorksheets = new UpdateReferencesInOtherWorksheets();
-        updateReferencesInOtherWorksheets.updateReferencesInOtherWorksheetsWhileDeletingBlankColumnsAndRowsInAWorksheet();
-
-        // Export Excel to HTML with GridLines
-        ExportExcelToHTMLWithGridLines exportExcel = new ExportExcelToHTMLWithGridLines();
-        exportExcel.exportExcelToHTMLWithGridLines();
-
-        // Automatically Refresh OLE Object via Microsoft Excel using Aspose.Cells
-        AutomaticallyRefreshOLEObject automaticallyRefreshOLEObject = new AutomaticallyRefreshOLEObject();
-        automaticallyRefreshOLEObject.automaticallyRefreshOLEObject();
-
-        // Set the Comment for Table or List Object inside the Worksheet
-        SetCommentForTableOrListObject setComment = new SetCommentForTableOrListObject();
-        setComment.setCommentForTableOrListObject();
-
-        // Set Default Font while Rendering Spreadsheet to Images
-        SetDefaultFontWhileRenderingSpreadsheetToImage setDefaultFont = new SetDefaultFontWhileRenderingSpreadsheetToImage();
-        setDefaultFont.setDefaultFontWhileRenderingSpreadsheetToImages();
-
-        // Restrictions of Excel 2003 while Refreshing Pivot Table
-        RestrictionsOfExcel2003WhileRefreshingPivotTable restrictionsOfExcel = new RestrictionsOfExcel2003WhileRefreshingPivotTable();
-        restrictionsOfExcel.restrictionsOfExcel2003WhileRefreshingPivotTable();
-
-        // Setting Shadow of Text Effects of Shape or TextBox
-        SetShadowOfTextEffectsOfShapeOrTextBox shadowOfTextEffects = new SetShadowOfTextEffectsOfShapeOrTextBox();
-        shadowOfTextEffects.setShadowOfTextEffectsOfShapeOrTextBox();
-
-        // Direct calculation of custom function without writing it in a worksheet
-        DirectCalculationOfCustomFunction directCalculation = new DirectCalculationOfCustomFunction();
-        directCalculation.directCalculationOfCustomFunction();
-
-        // Export DataBar, ColorScale and IconSet Conditional Formatting while Excel to HTML Conversion
-        ExportDataBarColorScaleAndIconSetConditionalFormatting exportData = new ExportDataBarColorScaleAndIconSetConditionalFormatting();
-        exportData.exportDataBarColorScaleAndIconSetConditionalFormatting();
-
-        // Render Unicode Supplementary characters in output Pdf by Aspose.Cells
-        RenderUnicodeSupplementaryCharacters renderUnicode = new RenderUnicodeSupplementaryCharacters();
-        renderUnicode.renderUnicodeSupplementaryCharactersInOutputPdf();
-
-        // Refresh and Calculate Pivot Table having Calculated Items
-        RefreshAndCalculatePivotTableHavingCalculatedItems refreshAndCalculate = new RefreshAndCalculatePivotTableHavingCalculatedItems();
-        refreshAndCalculate.refreshAndCalculatePivotTableHavingCalculatedItems();
-
-        // Change Character Spacing of Excel TextBox or Shape
-        ChangeCharacterSpacingOfExcelTextBoxOrShape changeCharacterSpacing = new ChangeCharacterSpacingOfExcelTextBoxOrShape();
-        changeCharacterSpacing.changeCharacterSpacingOfExcelTextBoxOrShape();
-
-        // Load Source Excel File Without Charts
-        LoadSourceExcelFileWithoutCharts loadSourceExcelFile = new LoadSourceExcelFileWithoutCharts();
-        loadSourceExcelFile.loadSourceExcelFileWithoutCharts();
-
-        // Support for Layout of DIV Tags while Loading HTML
-        SupportForLayoutOfDIVTags supportForLayout = new SupportForLayoutOfDIVTags();
-        supportForLayout.supportForLayoutOfDIVTagsWhileLoadingHTML();
-
-        // Set Text of Chart Legend Entry Fill to None
-        SetTextOfChartLegendEntryFillToNone setText = new SetTextOfChartLegendEntryFillToNone();
-        setText.setTextOfChartLegendEntryFillToNone();
-
-        // Load Workbook with Specified Printer Paper Size
-        LoadWorkbookWithSpecifiedPrinterPaperSize loadWorkbook = new LoadWorkbookWithSpecifiedPrinterPaperSize();
-        loadWorkbook.loadWorkbookWithSpecifiedPrinterPaperSize();
-
-        // Set Line Spacing of the Paragraph in a Shape or TextBox
-        SetLineSpacingOfTheParagraphInAShapeOrTextBox lineSpacingOfTheParagraph = new SetLineSpacingOfTheParagraphInAShapeOrTextBox();
-        lineSpacingOfTheParagraph.setLineSpacingOfTheParagraphInAShapeOrTextBox();
-
-        // Create TextBox Having Each Line with Different Horizontal Alignment
-        CreateTextBoxHavingEachLineWithDifferentHorizontalAlignment createTextBox = new CreateTextBoxHavingEachLineWithDifferentHorizontalAlignment();
-        createTextBox.createTextBoxHavingEachLineWithDifferentHorizontalAlignment();
-
-        // Change Data Source of the Chart to Destination Worksheet while Copying Rows or Range
-        ChangeDataSourceOfTheChartToDestinationWorksheet changeDataSource = new ChangeDataSourceOfTheChartToDestinationWorksheet();
-        changeDataSource.changeDataSourceOfTheChartToDestinationWorksheetWhileCopyingRowsOrRange();
-
-        // Configuring Fonts for Rendering Spreadsheets
-        ConfigureFontsForRenderingSpreadsheets fontsForRenderingSpreadsheets = new ConfigureFontsForRenderingSpreadsheets();
-        fontsForRenderingSpreadsheets.selectionOfFonts();
-
-        // Decrease the Calculation Time of Cell.Calculate() method
-        DecreaseTheCalculationTimeOfCellCalculateMethod decreaseTheCalculationTime = new DecreaseTheCalculationTimeOfCellCalculateMethod();
-        decreaseTheCalculationTime.decreaseTheCalculationTimeOfCellCalculateMethod();
-
-        // Expanding text from right to left while exporting Excel file to HTML
-        ExpandTextFromRightToLeftWhileExportingExcelFileToHTML expandText = new ExpandTextFromRightToLeftWhileExportingExcelFileToHTML();
-        expandText.expandTextFromRightToLeftWhileExportingExcelFileToHTML();
-
-        // Find if Data Points are in the Second Pie or Bar on a Pie of Pie or Bar of Pie Chart
-        FindIfDataPointsAreInTheSecondPieOrBarOnAPieOfPieOrBarOfPieChart findIfDataPoints = new FindIfDataPointsAreInTheSecondPieOrBarOnAPieOfPieOrBarOfPieChart();
-        findIfDataPoints.findIfDataPointsAreInTheSecondPieOrBarOnAPieOfPieOrBarOfPieChart();
-
-        // Get or Set the Class Identifier of the Embedded OLE Object
-        GetOrSetTheClassIdentifierOfTheEmbeddedOLEObject embeddedOLEObject = new GetOrSetTheClassIdentifierOfTheEmbeddedOLEObject();
-        embeddedOLEObject.getOrSetTheClassIdentifierOfTheEmbeddedOLEObject();
-
-        // Provide exported worksheet html file path via IFilePathProvider interface
-        ProvideExportedWorksheetHtmlFilePath exportedWorksheetHtmlFilePath = new ProvideExportedWorksheetHtmlFilePath();
-        exportedWorksheetHtmlFilePath.provideExportedWorksheetHtmlFilePath();
-
-        // Update ActiveX ComboBox Control
-        UpdateActiveXComboBoxControl comboBoxControl = new UpdateActiveXComboBoxControl();
-        comboBoxControl.updateActiveXComboBoxControl();
+    public void startTechnicalArticlesActivity() {
+        Intent technicalArticlesIntent = new Intent(this, TechnicalArticlesActivity.class);
+        startActivity(technicalArticlesIntent);
     }
 
     public void saveAssetsFilesToExternalStorage() {
@@ -1014,7 +879,7 @@ public class MainActivity extends AppCompatActivity {
             progressDialog.setMessage(getString(R.string.saving_resource_files_external_storage));
             progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
             progressDialog.setIndeterminate(false);
-            progressDialog.setMax(30);
+            progressDialog.setMax(35);
             progressDialog.setCancelable(false);
             progressDialog.show();
         }
@@ -1082,6 +947,17 @@ public class MainActivity extends AppCompatActivity {
             publishProgress(Integer.valueOf(29));
             Utils.saveFileToExternalStorage(MainActivity.this, "ComboBox_Sample.xlsx");
             publishProgress(Integer.valueOf(30));
+            Utils.saveFileToExternalStorage(MainActivity.this, "sample.xlsm");
+            publishProgress(Integer.valueOf(31));
+            Utils.saveFileToExternalStorage(MainActivity.this, "WebQuerySample.xlsx");
+            publishProgress(Integer.valueOf(32));
+            Utils.saveFileToExternalStorage(MainActivity.this, "CustomerReport.xls");
+            publishProgress(Integer.valueOf(33));
+            Utils.saveFileToExternalStorage(MainActivity.this, "PageSetup.xls");
+            publishProgress(Integer.valueOf(34));
+            Utils.saveFileToExternalStorage(MainActivity.this, "HTMLLink.xlsx");
+            publishProgress(Integer.valueOf(35));
+
             return null;
         }
 

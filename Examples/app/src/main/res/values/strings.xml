@@ -3,4 +3,5 @@
     <string name="write_to_external_storage_permission">Write to External Storage permission is required for APIs to run properly</string>
     <string name="permission_denied_external_storage">Permission denied to write to external storage</string>
     <string name="saving_resource_files_external_storage">Saving Resource Files to External Storage</string>
+    <string name="title_activity_technical_articles">Technical Articles</string>
 </resources>
