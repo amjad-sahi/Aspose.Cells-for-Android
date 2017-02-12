@@ -10,6 +10,7 @@ import com.aspose.cells.FontSourceBase;
 import com.aspose.cells.MemoryFontSource;
 
 import java.io.File;
+import java.io.FileInputStream;
 
 public class ConfigureFontsForRenderingSpreadsheets {
 
@@ -41,7 +42,11 @@ public class ConfigureFontsForRenderingSpreadsheets {
             FileFontSource sourceFile = new FileFontSource(fontFile);
 
             //Defining MemoryFontSource
-            byte[] bytes = org.apache.commons.io.FileUtils.readFileToByteArray(new File(fontFile));
+            File file = new File(fontFile);
+            FileInputStream fin = new FileInputStream(file);
+            byte[] bytes = new byte[(int)file.length()];
+            fin.read(bytes);
+            fin.close();
             MemoryFontSource sourceMemory = new MemoryFontSource(bytes);
 
             //Setting font sources

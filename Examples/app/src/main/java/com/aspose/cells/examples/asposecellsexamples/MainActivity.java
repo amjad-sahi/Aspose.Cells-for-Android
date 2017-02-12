@@ -6,16 +6,22 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.aspose.cells.CellsHelper;
+import com.aspose.cells.LibsLoadHelper;
+import com.aspose.cells.LoadOptions;
 import com.aspose.cells.PivotTable;
+import com.aspose.cells.Workbook;
 import com.aspose.cells.examples.asposecellsexamples.AdvancedTopics.PivotTables.ApplyConsolidationFunctionToDataFieldsOfPivotTable;
 import com.aspose.cells.examples.asposecellsexamples.AdvancedTopics.PivotTables.ChangeAPivotTableSourceData;
 import com.aspose.cells.examples.asposecellsexamples.AdvancedTopics.PivotTables.CreateAPivotTableReport;
@@ -79,6 +85,7 @@ import com.aspose.cells.examples.asposecellsexamples.RowsAndColumns.ManagingRows
 import com.aspose.cells.examples.asposecellsexamples.Table.ConvertTableToRangeOfData;
 import com.aspose.cells.examples.asposecellsexamples.Table.CreateAListObject;
 import com.aspose.cells.examples.asposecellsexamples.Table.FormatAListObject;
+import com.aspose.cells.examples.asposecellsexamples.TechnicalArticles.*;
 import com.aspose.cells.examples.asposecellsexamples.UtilityFeatures.ConvertChartToImage;
 import com.aspose.cells.examples.asposecellsexamples.UtilityFeatures.ConvertChartToPDF;
 import com.aspose.cells.examples.asposecellsexamples.UtilityFeatures.ConvertExcelFilesToHTML;
@@ -108,6 +115,8 @@ import com.aspose.cells.examples.asposecellsexamples.Worksheets.SecurityFeatures
 import com.aspose.cells.examples.asposecellsexamples.Worksheets.SecurityFeatures.ProtectWorksheet;
 import com.aspose.cells.examples.asposecellsexamples.Worksheets.SecurityFeatures.UnprotectWorksheet;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -124,7 +133,6 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, getString(R.string.write_to_external_storage_permission), Toast.LENGTH_SHORT).show();
                 return;
             }
-
             switch (position) {
                 case 0:
                     // Working with Files
@@ -174,6 +182,15 @@ public class MainActivity extends AppCompatActivity {
                     // Technical Articles
                     startTechnicalArticlesActivity();
                     break;
+                case 12:
+                    ManagingShadowEffectsforShape.Run(MainActivity.this);
+                    break;
+                case 13:
+                    ManagingGlowEffectsforShape.Run(MainActivity.this);
+                    break;
+                case 14:
+                    Managing3DEffectsforShapes.Run(MainActivity.this);
+                    break;
                 default:
                     break;
             }
@@ -184,6 +201,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Apply license
+        Utils.applyALicense(MainActivity.this);
+
+        //Load apsose.cells thirdparty libraries apk
+        LibsLoadHelper.loadLibs(getApplicationContext());
 
         listView = (ListView)findViewById(R.id.list_view);
         ArrayList<String> sectionsNames = new ArrayList<String>();
@@ -199,6 +222,9 @@ public class MainActivity extends AppCompatActivity {
         sectionsNames.add("Working with Formulas");
         sectionsNames.add("Working with CellsHelper Methods");
         sectionsNames.add("Technical Articles");
+        sectionsNames.add("Managing Shadow Effects for Shapes");
+        sectionsNames.add("Managing Glow Effects for Shape");
+        sectionsNames.add("Managing 3D Effects for Shapes");
 
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, sectionsNames);
         listView.setAdapter(arrayAdapter);
@@ -209,7 +235,8 @@ public class MainActivity extends AppCompatActivity {
         requestWriteToExternalStoragePermission();
     }
 
-    public void runWorkingWithFilesExamples() {
+    public void runWorkingWithFilesExamples(){
+
         // Open File
         OpenFile openFile = new OpenFile();
         openFile.openThroughPath();
@@ -887,7 +914,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... voids) {
             // Save Resource Files To External Storage
-            Utils.saveFileToExternalStorage(MainActivity.this, "Aspose.Total.Java.lic");
+            //Utils.saveFileToExternalStorage(MainActivity.this, "Aspose.Total.Android.lic");
             publishProgress(Integer.valueOf(1));
             Utils.saveFileToExternalStorage(MainActivity.this, "Book1.xls");
             publishProgress(Integer.valueOf(2));

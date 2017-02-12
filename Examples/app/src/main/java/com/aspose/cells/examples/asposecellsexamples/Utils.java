@@ -22,7 +22,23 @@ public class Utils {
             String filePath = myDir.getCanonicalPath() + File.separator;
 
             License license = new License();
-            license.setLicense(filePath + "Aspose.Total.Java.lic");
+            license.setLicense(filePath + "Aspose.Total.Android.lic");
+        } catch (Exception e) {
+            Log.e(TAG, "Failed to set License", e);
+        }
+    }
+
+    public static void applyALicense(Context context) {
+        try {
+
+            if(License.isLicenseSet()==true)
+                return;
+
+            AssetManager assetManager = context.getAssets();
+            InputStream in = assetManager.open("Aspose.Total.Android.lic");
+
+            License license = new License();
+            license.setLicense(in);
         } catch (Exception e) {
             Log.e(TAG, "Failed to set License", e);
         }
