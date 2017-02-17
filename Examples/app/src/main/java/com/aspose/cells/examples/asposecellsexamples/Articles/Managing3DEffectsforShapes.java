@@ -1,4 +1,4 @@
-package com.aspose.cells.examples.asposecellsexamples.TechnicalArticles;
+package com.aspose.cells.examples.asposecellsexamples.Articles;
 
 import android.content.Context;
 import android.content.res.AssetManager;
@@ -11,25 +11,23 @@ import com.aspose.cells.examples.asposecellsexamples.MainActivity;
 import java.io.File;
 import java.io.InputStream;
 
-public class ManagingShadowEffectsforShape {
+public class Managing3DEffectsforShapes {
 
     private static final String TAG = "Aspose.Cells.Examples";
 
     /**
-     * Run Code: Managing Shadow Effects for Shapes
+     * Run Code: Managing 3D Effects for Shapes
      */
-    public static void Run(Context context)
-    {
-        Log.e(TAG, "Running ManagingShadowEffectsforShape");
+    public static void Run(Context context) {
+        Log.w(TAG, "Running Managing3DEffectsforShapes");
 
-        try
-        {
+        try {
             //Get the path of Aspose directory inside the SD Card
             String SD_PATH = Environment.getExternalStorageDirectory().toString() + "/Aspose/";
 
             //Read the sample workbook from assest
             AssetManager assetManager = context.getAssets();
-            InputStream in = assetManager.open("sampleManagingShadowEffectsforShape.xlsx");
+            InputStream in = assetManager.open("sampleManaging3DEffectsforShapes.xlsx");
 
             //Load a sample spreadsheet containing a shape
             Workbook book = new Workbook(in);
@@ -40,24 +38,19 @@ public class ManagingShadowEffectsforShape {
             //Access first shape from the collection
             Shape shape = sheet.getShapes().get(0);
 
-            //Get the instance of ShadowEffect from the Shape object
-            ShadowEffect shadow = shape.getShadowEffect();
+            //Get the instance of ThreeDFormat from the Shape object
+            ThreeDFormat threeD = shape.getThreeDFormat();
 
-            //Set its Angle, Blur, Size, Transparency and Distance properties
-            shadow.setAngle(150);
-            shadow.setBlur(30);
-            shadow.setSize(1.3);
-            shadow.setTransparency(0.5);
-            shadow.setDistance(80);
+            //Set its ContourWidth & ExtrusionHeight properties
+            threeD.setContourWidth(15);
+            threeD.setExtrusionHeight(30);
 
             //Save the result in XLSX format
-            book.save(SD_PATH + "outputManagingShadowEffectsforShape.xlsx");
+            book.save(SD_PATH + "outputManaging3DEffectsforShapes.xlsx");
 
-            Log.e(TAG, "outputManagingShadowEffectsforShape.xlsx created successfully");
-        }
-        catch (Exception ex)
-        {
-            Log.e(TAG, "Some exception occured in ManagingShadowEffectsforShape");
+            Log.w(TAG, "outputManaging3DEffectsforShapes.xlsx created successfully");
+        } catch (Exception ex) {
+            Log.e(TAG, "Some exception occurred in Managing3DEffectsforShapes");
             Log.e(TAG, "Exception: " + ex.getMessage());
             Log.e(TAG, "StackTrace: " + Log.getStackTraceString(ex));
         }

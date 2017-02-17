@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.aspose.cells.CellsHelper;
 import com.aspose.cells.LibsLoadHelper;
+import com.aspose.cells.License;
 import com.aspose.cells.LoadOptions;
 import com.aspose.cells.PivotTable;
 import com.aspose.cells.Workbook;
@@ -29,6 +30,7 @@ import com.aspose.cells.examples.asposecellsexamples.AdvancedTopics.PivotTables.
 import com.aspose.cells.examples.asposecellsexamples.AdvancedTopics.PivotTables.CustomizeTheAppearanceOfPivotTable;
 import com.aspose.cells.examples.asposecellsexamples.AdvancedTopics.SmartMarkersAndFormulaCalculation.FormulaCalculationEngine;
 import com.aspose.cells.examples.asposecellsexamples.AdvancedTopics.SmartMarkersAndFormulaCalculation.SmartMarkers;
+import com.aspose.cells.examples.asposecellsexamples.Articles.*;
 import com.aspose.cells.examples.asposecellsexamples.CellsHelperMethods.DetectFileFormat;
 import com.aspose.cells.examples.asposecellsexamples.CellsHelperMethods.GetCellNameFromRowAndColumnIndices;
 import com.aspose.cells.examples.asposecellsexamples.CellsHelperMethods.GetRowAndColumnIndicesFromCellName;
@@ -117,13 +119,62 @@ import com.aspose.cells.examples.asposecellsexamples.Worksheets.SecurityFeatures
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.util.ArrayList;
+import java.util.*;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getName();
     private static final int REQUEST_WRITE_EXTERNAL_STORAGE = 1;
     private ListView listView;
+
+    String strManagingReflectionEffectsforShapes="Managing Reflection Effects for Shapes";
+    String strManagingShadowEffectsforShape = "Managing Shadow Effects for Shapes";
+    String strManagingGlowEffectsforShape = "Managing Glow Effects for Shapes";
+    String strManaging3DEffectsforShapes = "Managing 3-D Effects for Shapes";
+    String strAddingWordArtwithBuiltinStyles = "Adding WordArt with Built-in Styles";
+    String strSettingPresetWordArtStylestoShapeText = "Setting Preset WordArt Styles to Shape's Text";
+    String strAutomaticallyPropagateFormulainExcelTable = "Automatically Propagate Formula in Excel Table";
+    String strLinkingCellstoXMLMapElements = "Linking Cells to XML Map Elements";
+    String strDetectingHiddenExternalLinks = "Detecting Hidden External Links";
+    String strUsingGlobalizationSettingsClassForCustomLabelsForSubtotals = "Using GlobalizationSettings Class For Custom Labels For Subtotals";
+    String strUsingGlobalizationSettingsClassForCustomTextForLabels = "Using GlobalizationSettings Class For Custom Text For Labels";
+    String strCreatingStyleObjectWithoutAddingittoStyleCollection = "Creating Style Object Without Adding it to StyleCollection";
+    String strAddingXMLMaptoWorkbook = "Adding XML Map to Workbook";
+    String strChangingtheAbsolutePathofExternalDataSource = "Changing the Absolute Path of External Data Source";
+    String strManagingScaleCropandLinksUpToDateBuiltInDocumentProperties = "Managing ScaleCrop and LinksUpToDate Built-In Document Properties";
+    String strExportingXMLMapData = "Exporting XML Map Data";
+
+    String[] strArticlesList = {
+            "Working with Files",
+            "Working with Worksheets",
+            "Working with Rows and Columns",
+            "Working with Data",
+            "Working with Data Formatting",
+            "Creating Charts",
+            "Working with Other Drawing Objects",
+            "Advanced Topics",
+            "Working with Tables",
+            "Working with Formulas",
+            "Working with CellsHelper Methods",
+            "Technical Articles",
+            strAddingWordArtwithBuiltinStyles,
+            strAddingXMLMaptoWorkbook,
+            strAutomaticallyPropagateFormulainExcelTable,
+            strChangingtheAbsolutePathofExternalDataSource,
+            strCreatingStyleObjectWithoutAddingittoStyleCollection,
+            strDetectingHiddenExternalLinks,
+            strExportingXMLMapData,
+            strLinkingCellstoXMLMapElements,
+            strManaging3DEffectsforShapes,
+            strManagingGlowEffectsforShape,
+            strManagingReflectionEffectsforShapes,
+            strManagingScaleCropandLinksUpToDateBuiltInDocumentProperties,
+            strManagingShadowEffectsforShape,
+            strSettingPresetWordArtStylestoShapeText,
+            strUsingGlobalizationSettingsClassForCustomLabelsForSubtotals,
+            strUsingGlobalizationSettingsClassForCustomTextForLabels
+    };
+
 
     private AdapterView.OnItemClickListener sectionsListener = new AdapterView.OnItemClickListener() {
         @Override
@@ -182,20 +233,98 @@ public class MainActivity extends AppCompatActivity {
                     // Technical Articles
                     startTechnicalArticlesActivity();
                     break;
-                case 12:
-                    ManagingShadowEffectsforShape.Run(MainActivity.this);
-                    break;
-                case 13:
-                    ManagingGlowEffectsforShape.Run(MainActivity.this);
-                    break;
-                case 14:
-                    Managing3DEffectsforShapes.Run(MainActivity.this);
-                    break;
                 default:
+                    RunArticlesExamples(position);
                     break;
             }
         }
     };
+
+    void RunArticlesExamples(int position)
+    {
+        String strArticle = strArticlesList[position];
+
+        if(strArticle.equalsIgnoreCase(strManagingReflectionEffectsforShapes)) {
+            ManagingReflectionEffectsforShapes.Run(MainActivity.this);
+            return;
+        }
+
+        if(strArticle.equalsIgnoreCase(strManagingShadowEffectsforShape)) {
+            ManagingShadowEffectsforShape.Run(MainActivity.this);
+            return;
+        }
+
+        if(strArticle.equalsIgnoreCase(strManagingGlowEffectsforShape)) {
+            ManagingGlowEffectsforShape.Run(MainActivity.this);
+            return;
+        }
+
+        if(strArticle.equalsIgnoreCase(strManaging3DEffectsforShapes)) {
+            Managing3DEffectsforShapes.Run(MainActivity.this);
+            return;
+        }
+
+        if(strArticle.equalsIgnoreCase(strAddingWordArtwithBuiltinStyles)) {
+            AddingWordArtwithBuiltinStyles.Run(MainActivity.this);
+            return;
+        }
+
+        if(strArticle.equalsIgnoreCase(strSettingPresetWordArtStylestoShapeText)) {
+            SettingPresetWordArtStylestoShapeText.Run(MainActivity.this);
+            return;
+        }
+
+        if(strArticle.equalsIgnoreCase(strAutomaticallyPropagateFormulainExcelTable)) {
+            AutomaticallyPropagateFormulainExcelTable.Run(MainActivity.this);
+            return;
+        }
+
+        if(strArticle.equalsIgnoreCase(strLinkingCellstoXMLMapElements)) {
+            LinkingCellstoXMLMapElements.Run(MainActivity.this);
+            return;
+        }
+
+        if(strArticle.equalsIgnoreCase(strDetectingHiddenExternalLinks)) {
+            DetectingHiddenExternalLinks.Run(MainActivity.this);
+            return;
+        }
+
+        if(strArticle.equalsIgnoreCase(strUsingGlobalizationSettingsClassForCustomLabelsForSubtotals)) {
+            UsingGlobalizationSettingsClassForCustomLabelsForSubtotals.Run(MainActivity.this);
+            return;
+        }
+
+        if(strArticle.equalsIgnoreCase(strUsingGlobalizationSettingsClassForCustomTextForLabels)) {
+            UsingGlobalizationSettingsClassForCustomTextForLabels.Run(MainActivity.this);
+            return;
+        }
+
+        if(strArticle.equalsIgnoreCase(strCreatingStyleObjectWithoutAddingittoStyleCollection)) {
+            CreatingStyleObjectWithoutAddingittoStyleCollection.Run(MainActivity.this);
+            return;
+        }
+
+        if(strArticle.equalsIgnoreCase(strAddingXMLMaptoWorkbook)) {
+            AddingXMLMaptoWorkbook.Run(MainActivity.this);
+            return;
+        }
+
+        if(strArticle.equalsIgnoreCase(strChangingtheAbsolutePathofExternalDataSource)) {
+            ChangingtheAbsolutePathofExternalDataSource.Run(MainActivity.this);
+            return;
+        }
+
+        if(strArticle.equalsIgnoreCase(strManagingScaleCropandLinksUpToDateBuiltInDocumentProperties)) {
+            ManagingScaleCropandLinksUpToDateBuiltInDocumentProperties.Run(MainActivity.this);
+            return;
+        }
+
+        if(strArticle.equalsIgnoreCase(strExportingXMLMapData)) {
+            ExportingXMLMapData.Run(MainActivity.this);
+            return;
+        }
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -210,21 +339,11 @@ public class MainActivity extends AppCompatActivity {
 
         listView = (ListView)findViewById(R.id.list_view);
         ArrayList<String> sectionsNames = new ArrayList<String>();
-        sectionsNames.add("Working with Files");
-        sectionsNames.add("Working with Worksheets");
-        sectionsNames.add("Working with Rows and Columns");
-        sectionsNames.add("Working with Data");
-        sectionsNames.add("Working with Data Formatting");
-        sectionsNames.add("Creating Charts");
-        sectionsNames.add("Working with Other Drawing Objects");
-        sectionsNames.add("Advanced Topics");
-        sectionsNames.add("Working with Tables");
-        sectionsNames.add("Working with Formulas");
-        sectionsNames.add("Working with CellsHelper Methods");
-        sectionsNames.add("Technical Articles");
-        sectionsNames.add("Managing Shadow Effects for Shapes");
-        sectionsNames.add("Managing Glow Effects for Shape");
-        sectionsNames.add("Managing 3D Effects for Shapes");
+
+        for(int i=0; i < strArticlesList.length; i++)
+        {
+            sectionsNames.add(strArticlesList[i]);
+        }
 
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, sectionsNames);
         listView.setAdapter(arrayAdapter);

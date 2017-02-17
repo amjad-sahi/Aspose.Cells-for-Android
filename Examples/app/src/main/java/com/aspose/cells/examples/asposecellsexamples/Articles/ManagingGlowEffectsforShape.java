@@ -1,4 +1,4 @@
-package com.aspose.cells.examples.asposecellsexamples.TechnicalArticles;
+package com.aspose.cells.examples.asposecellsexamples.Articles;
 
 import android.content.Context;
 import android.content.res.AssetManager;
@@ -11,15 +11,15 @@ import com.aspose.cells.examples.asposecellsexamples.MainActivity;
 import java.io.File;
 import java.io.InputStream;
 
-public class Managing3DEffectsforShapes {
+public class ManagingGlowEffectsforShape {
 
     private static final String TAG = "Aspose.Cells.Examples";
 
     /**
-     * Run Code: Managing 3D Effects for Shapes
+     * Run Code: Managing Glow Effects for Shape
      */
     public static void Run(Context context) {
-        Log.e(TAG, "Running Managing3DEffectsforShapes");
+        Log.w(TAG, "Running ManagingGlowEffectsforShape");
 
         try {
             //Get the path of Aspose directory inside the SD Card
@@ -27,7 +27,7 @@ public class Managing3DEffectsforShapes {
 
             //Read the sample workbook from assest
             AssetManager assetManager = context.getAssets();
-            InputStream in = assetManager.open("sampleManaging3DEffectsforShapes.xlsx");
+            InputStream in = assetManager.open("sampleManagingGlowEffectsforShape.xlsx");
 
             //Load a sample spreadsheet containing a shape
             Workbook book = new Workbook(in);
@@ -38,19 +38,19 @@ public class Managing3DEffectsforShapes {
             //Access first shape from the collection
             Shape shape = sheet.getShapes().get(0);
 
-            //Get the instance of ThreeDFormat from the Shape object
-            ThreeDFormat threeD = shape.getThreeDFormat();
+            //Get the instance of GlowEffect from the Shape object
+            GlowEffect glow = shape.getGlow();
 
-            //Set its ContourWidth & ExtrusionHeight properties
-            threeD.setContourWidth(15);
-            threeD.setExtrusionHeight(30);
+            //Set its Size & Transparency properties
+            glow.setSize(90);
+            glow.setTransparency(0.5);
 
             //Save the result in XLSX format
-            book.save(SD_PATH + "outputManaging3DEffectsforShapes.xlsx");
+            book.save(SD_PATH + "outputManagingGlowEffectsforShape.xlsx");
 
-            Log.e(TAG, "outputManaging3DEffectsforShapes.xlsx created successfully");
+            Log.w(TAG, "outputManagingGlowEffectsforShape.xlsx created successfully");
         } catch (Exception ex) {
-            Log.e(TAG, "Some exception occured in Managing3DEffectsforShapes");
+            Log.e(TAG, "Some exception occurred in ManagingGlowEffectsforShape");
             Log.e(TAG, "Exception: " + ex.getMessage());
             Log.e(TAG, "StackTrace: " + Log.getStackTraceString(ex));
         }
