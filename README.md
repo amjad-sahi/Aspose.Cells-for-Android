@@ -19,7 +19,7 @@ Directory  | Description
 
 + **Website:** [www.aspose.com](http://www.aspose.com)
 + **Product Home:** [Aspose.Cells for Android](http://www.aspose.com/products/cells/android)
-+ **Download:** [Download Aspose.Cells for Android](http://www.aspose.com/downloads/cells/android)
++ **Download:** [Download Aspose.Cells for Android](https://downloads.aspose.com/cells/javaandroid)
 + **Documentation:** [Aspose.Cells for Android Documentation](http://www.aspose.com/docs/display/cellsandroid/Home)
 + **Forum:** [Aspose.Cells for Android Forum](http://www.aspose.com/community/forums/aspose.cells-product-family/19/showforum.aspx)
 + **Blog:** [Aspose.Cells for Android Blog](http://www.aspose.com/blogs/aspose-products/aspose-cells-product-family.html)
